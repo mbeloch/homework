@@ -2,7 +2,7 @@ const numbers = {
   2: ['a', 'b', 'c'],
   3: ['d', 'e', 'f'],
   4: ['g', 'h', 'i'],
-  5: ['j', 'k', 'k'],
+  5: ['j', 'k', 'l'],
   6: ['m', 'n', 'o'],
   7: ['p', 'q', 'r', 's'],
   8: ['t', 'u', 'v'],
@@ -32,8 +32,7 @@ function words(index, numeric, results) {
       newer.push(res + letter);
     })
   });
-  let newIndex = index + 1;
-  return words(newIndex, numeric, newer)
+  return words(index + 1, numeric, newer)
 }
 
 module.exports = phoneword;

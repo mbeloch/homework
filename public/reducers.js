@@ -1,15 +1,20 @@
 const initialState = {
-  counter: []
+  phonewords: []
 };
 
 function counterApp(state, action) {
   if (typeof state === "undefined") return initialState;
-
+  console.log(action.type);
   switch (action.type) {
-    case "Add":
-      return Object.assign( {}, state, {counter: state.counter + 1} );
+    case "PHONEWORDS_FULFILLED":
+      const phonewords = Array.isArray(action.payload.data) ? action.payload.data : [];
+      return Object.assign({}, state, {phonewords: phonewords});
+      break;
+    case "PHONEWORDS_REJECTED":
+      return Object.assign({}, state, {phonewords: []});
+      break;
     default:
-      return state;
+      return state
   }
 }
 

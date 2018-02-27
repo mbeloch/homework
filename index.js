@@ -12,9 +12,8 @@ app.get('/', function (req, res) {
   res.render('index');
 });
 
-app.get('/phoneword/:numeric', function (req, res) {
-  console.log(phoneword(req.params.numeric));
-  res.sendStatus(200)
+app.get('/phonewords/:numeric', function (req, res) {
+  res.send(phoneword(req.params.numeric))
 });
 
 app.listen(3000, function () {

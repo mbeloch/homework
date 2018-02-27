@@ -1,15 +1,17 @@
 import React from 'react'
 import { render } from 'react-dom'
-import NumberInserter from './NumberInserter'
+import Phonewords from './Phonewords'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import counterApp from './reducers'
+import thunk from 'redux-thunk'
+import promise from 'redux-promise-middleware'
 
-let store = createStore(counterApp);
+let store = createStore(counterApp, applyMiddleware(thunk, promise()));
 
 render(
   <Provider store={store}>
-    <NumberInserter/>
+    <Phonewords/>
   </Provider>,
   document.getElementById('app')
 );
