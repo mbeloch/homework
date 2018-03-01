@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import Phonewords from './Phonewords'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
-import counterApp from './reducers'
+import counterApp from './reducers/reducer'
 import thunk from 'redux-thunk'
 import promise from 'redux-promise-middleware'
 

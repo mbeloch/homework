@@ -4,6 +4,7 @@
   "description": "Fullstack JS homework",
   "main": "index.js",
   "scripts": {
+    "dev": "node index.js",
     "webpack": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

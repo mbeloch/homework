@@ -1,6 +1,6 @@
 import React, { propTypes } from 'react'
 import { connect } from 'react-redux'
-import { loadPhonewords } from './acition'
+import { loadPhonewords } from './actions/action'
 
 class Phonewords extends React.Component {
   constructor(props) {
