@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { loadPhonewords } from './actions/action'
 
 class Phonewords extends React.Component {
+  // Is this necessary?
   constructor(props) {
     super(props)
   }
@@ -18,6 +19,7 @@ class Phonewords extends React.Component {
         <div>
           <h1>Zadej Cislo</h1>
           <input ref="numbers"/>
+          {/* Are you able to do it without binding? */}
           <button onClick={this.click.bind(this)}>chci videt co mi nabidnes</button>
           <div>
             {this.props.phonewords.map((word, i) => {
