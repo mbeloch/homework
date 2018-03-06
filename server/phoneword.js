@@ -1,3 +1,6 @@
+// Show us at least simple stupid test for this file please.
+// There is a lot of not very readable code - tests are necessary.
+
 const numbers = {
   2: ['a', 'b', 'c'],
   3: ['d', 'e', 'f'],
@@ -10,6 +13,10 @@ const numbers = {
 };
 
 function phoneword(numeric) {
+  // This basically means that 123 doesn't work but I can press "1" on T9
+  // keyboard. Can you figure out better input handling? For example I got
+  // empty response for input "123" so I wanted to end this code review
+  // because "hm, it doesn't work"...
   if (!validation(numeric)) return null;
 
   return words(1, numeric, numbers[numeric[0]]);
