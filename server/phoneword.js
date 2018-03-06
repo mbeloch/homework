@@ -1,7 +1,9 @@
 // Show us at least simple stupid test for this file please.
 // There is a lot of not very readable code - tests are necessary.
+// M: npm run test
 
 const numbers = {
+  1: ['.', ',', '?', '!'],
   2: ['a', 'b', 'c'],
   3: ['d', 'e', 'f'],
   4: ['g', 'h', 'i'],
@@ -17,6 +19,7 @@ function phoneword(numeric) {
   // keyboard. Can you figure out better input handling? For example I got
   // empty response for input "123" so I wanted to end this code review
   // because "hm, it doesn't work"...
+  // M: sorry :)
   if (!validation(numeric)) return null;
 
   return words(1, numeric, numbers[numeric[0]]);

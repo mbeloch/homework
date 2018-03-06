@@ -21,9 +21,10 @@ app.get('/phonewords/:numeric', function (req, res) {
   let words = phoneword(req.params.numeric);
 
   // filtering based on word list
-  if (config.useWordslist) {
+  if (config.useWordslist && words) {
     // Words may be null so you cannot access "words[0]" here. Try for
     // example "123" again - it won't work and server will fail.
+    // M: Right
     const suitableWords = wordList.filter(word => word.length === words[0].length);
     words = words.reduce((result, word) => {
       if (suitableWords.indexOf(word) > -1) {

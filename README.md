@@ -14,6 +14,12 @@ for frontend part
 npm run webpack
 ```` 
 
+for run test 
+
+````
+npm run test
+```` 
+
 page for testing is available on `localhost:{port}/`
 
 ## Ways to go beyond the minimal solution

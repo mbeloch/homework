@@ -4,9 +4,12 @@ import { loadPhonewords } from './actions/action'
 
 class Phonewords extends React.Component {
   // Is this necessary?
+  // M: right, initial state is handle with reducer
+  /*
   constructor(props) {
     super(props)
   }
+  */
 
   click() {
     // skip empty string
@@ -19,11 +22,11 @@ class Phonewords extends React.Component {
         <div>
           <h1>Zadej Cislo</h1>
           <input ref="numbers"/>
-          {/* Are you able to do it without binding? */}
+          {/* Are you able to do it without binding? *//* In this case im accessing this.refs.numbers in click function, so ... nope */}
           <button onClick={this.click.bind(this)}>chci videt co mi nabidnes</button>
           <div>
             {this.props.phonewords.map((word, i) => {
-              return (<span>{word}, </span>)
+              return (<span>{word} - </span>)
             })}
           </div>
         </div>
